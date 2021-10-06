@@ -21,11 +21,9 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class MonthlyPatient {
     static FileWriter pw;
     public static String getHeader(){
-    
-            
+     
             StringBuilder sb = new StringBuilder();
-            
-            
+        
             sb.append("Name");
             sb.append(",");
             sb.append("Age");
@@ -47,13 +45,12 @@ public class MonthlyPatient {
             sb.append("date");
             sb.append("\r\n");
            
-            
             System.out.println("Finished");
             
             return sb.toString();
     }
     
-    
+    //CSV file
     public static void WriteCSV(String value){
         
         try {
@@ -64,9 +61,7 @@ public class MonthlyPatient {
             String completePayload = getHeader()+value;
                 pw.write(completePayload);
             
-            
             pw.close();
-            
             
         } catch (FileNotFoundException ex) {
             Logger.getLogger(MonthlyPatient.class.getName()).log(Level.SEVERE, null, ex);

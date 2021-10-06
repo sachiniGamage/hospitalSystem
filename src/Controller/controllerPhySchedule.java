@@ -32,10 +32,6 @@ public class controllerPhySchedule {
             pstmt.executeUpdate();
             JOptionPane.showMessageDialog(null, "Inserted Successfully");
             con.close();
-                       
-                     
-                        
-            
             
         }catch(Exception e){
             System.out.println(e);

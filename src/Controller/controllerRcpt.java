@@ -20,8 +20,6 @@ public class controllerRcpt {
             
              Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/phy","root","");      
-//            String insert = "insert into patient values('"+regNo+"'," + name + "',"+age+"', " +addr+"'," +occupation+ "'," +email+"'," +contactNo+")";
-                     
 
             String insert = "insert into receiptionist(name,contctNo,email) values(?,?,?)";
             PreparedStatement pstmt = con.prepareStatement(insert);
@@ -33,10 +31,7 @@ public class controllerRcpt {
             pstmt.executeUpdate();
             JOptionPane.showMessageDialog(null, "Inserted Successfully");
             con.close();
-                       
-                     
-                        
-            
+   
             
         }catch(Exception e){
             System.out.println(e);

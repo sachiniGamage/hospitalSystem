@@ -294,8 +294,6 @@ public void TbDel(){
                 String vw = "name: "+name+ "\n" +"contact No: "+contct+"\n"+ "email : "+email;
                 
                 jTextAreaPDetails.setText(vw);
-//                jTextAreaView.setText(name);
-//                jTextAreaView.setText(gender);
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "search fail");
         }
@@ -374,8 +372,6 @@ public void TbDel(){
                 String vw = "name: "+name+ "\n" +"contact No: "+contct+"\n"+ "email : "+email;
                 
                 jTextAreadetails.setText(vw);
-//                jTextAreaView.setText(name);
-//                jTextAreaView.setText(gender);
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "search fail");
         }

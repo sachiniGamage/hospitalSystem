@@ -26,12 +26,9 @@ public class PatientReport {
         ResultSet rs = null;
         Connection conn = DBConnection.connect();
         
-        
         PatientID = pID;
         String sql1 = "SELECT `Name`,`Age`,`Gender`,`Contact_number`,`email`,`ward` FROM `patient` WHERE `Reg_no` LIKE "+PatientID ;
         String sql2 = "SELECT `diagnosis` FROM `physio_plan` WHERE `Reg_no` LIKE "+PatientID; 
-        
-        
         
         String v="";
         String a="";
@@ -57,7 +54,6 @@ public class PatientReport {
                     email = rs.getString("email");
                     ward = rs.getString("ward");
                     
-//                    System.out.println(""+rs.next());
                     v = "Name: "+name+"\n"+"Age: "+age+"\n"+"Gender: "+gender+"\n"+"Contact Number : "+Contct+"\n"+"Email : "+email+"\n"+"Ward : "+ward+"\n";
                     
                 }
@@ -70,15 +66,11 @@ public class PatientReport {
             rs = pst.executeQuery();
                 
                 String diagnosis = "";
-                
-
-                
+ 
                 while(rs.next()){
                  System.out.println("ssdsds");
                     diagnosis = rs.getString("diagnosis");
                     
-                    
-//                    System.out.println(""+rs.next());
                     a = "Diagnosis: "+diagnosis+"\n";
                     
                 }

@@ -18,8 +18,6 @@ public class DBConnection {
         Connection connection = null;    
         
         try {            
-//            Class.forName("com.mysql.jdbc.Driver");
-//            Connection con =  DriverManager.getConnection("jdbc:mysql://localhost:3306/patient","root","");
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/phy","root",""); 
         }

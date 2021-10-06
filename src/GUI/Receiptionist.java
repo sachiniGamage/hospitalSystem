@@ -276,12 +276,7 @@ if(Password.equals(CPassword)){
                  JOptionPane.showMessageDialog(this,"Registered Successfully ");
 
             }
-            
-    
-    
 
-
-    
     
 }
     }//GEN-LAST:event_jButton1ActionPerformed

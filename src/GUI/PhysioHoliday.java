@@ -152,10 +152,6 @@ public class PhysioHoliday extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
          try{
-            
-           
-            
-            
                 String query = "INSERT INTO `holiday`(`Name`, `Start_date`, `End_date`) VALUES (?,?,?)";
                  con = DriverManager.getConnection("jdbc:mysql://localhost/phy","root","");
                  
@@ -171,10 +167,7 @@ public class PhysioHoliday extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, ex);
             JOptionPane.showMessageDialog(null, "Error!!!");
         }
-                
-      
-            
-            
+
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

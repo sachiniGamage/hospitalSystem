@@ -13,19 +13,16 @@ import javax.swing.JOptionPane;
  * @author 94712
  */
 public class PatientValidation {
+    //Name
     public static boolean validateName(String name){
-//        name = Patient_Reg.class.getName();
          if((name == "") || (name == null) ){
              JOptionPane.showMessageDialog(null, "Please enter name");
              return false;
          }
          return true;
     }
-    
-    
-    
+    //Age
     public static boolean validateAge(String age){
-//        age = Patient_Reg.getAge();
          if((age == null) ||(age == "")){
              JOptionPane.showMessageDialog(null, "Please enter age again");
              return false;
@@ -33,7 +30,7 @@ public class PatientValidation {
          return true;
     }
     
-    
+    //Contact number
     public static boolean validateContact(String contactNo){
         
          if((contactNo == "") || (contactNo==null) || (contactNo.length() != 10) ){
@@ -44,7 +41,7 @@ public class PatientValidation {
     }
     
     
-    
+    //Email Address
     public static boolean validateEmail(String Email){
       
          String e = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$";
@@ -55,8 +52,7 @@ public class PatientValidation {
          JOptionPane.showMessageDialog(null, "added");
          }
          return isfind;
-         
-         
+          
     }
     
     

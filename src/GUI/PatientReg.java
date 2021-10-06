@@ -434,9 +434,6 @@ public class PatientReg extends javax.swing.JFrame {
             String ward;
             ward = comboWard.getSelectedItem().toString();
             
-//            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            
-            
             boolean isvalidate = PatientValidation.validateName(name1) && PatientValidation.validateAge(age1) && PatientValidation.validateEmail(email1) && PatientValidation.validateContact(contactNo1);
            
             if(isvalidate){          
@@ -451,26 +448,11 @@ public class PatientReg extends javax.swing.JFrame {
             }else{
                 JOptionPane.showMessageDialog(null, "Enter again");
             }
-            
-            
-            
-
-//            
-//           txtName.setText("");
-//           txtAge.setText("");
-//           jTextAreaAddress.setText("");
-//           txtOccupation.setText("");
-//           txtEmail.setText("");
-//            txtContact.setText("");
-            
 
         }
             catch (Exception e) {
                 System.out.println(e);
         }
-//        PatientReg p1 = new  PatientReg();
-//        p1.setVisible(true);
-//        this.dispose();
         
     }//GEN-LAST:event_btnSubmitActionPerformed
 

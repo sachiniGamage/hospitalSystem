@@ -20,9 +20,7 @@ public class controllerPhysiotheraphist {
         try{
             
              Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/phy","root","");      
-//            String insert = "insert into patient values('"+regNo+"'," + name + "',"+age+"', " +addr+"'," +occupation+ "'," +email+"'," +contactNo+")";
-                     
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/phy","root","");              
 
             String insert = "insert into physio_plan(Reg_no,diagnosis,plan,history) values(?,?,?,?)";
             PreparedStatement pstmt = con.prepareStatement(insert);
@@ -35,11 +33,7 @@ public class controllerPhysiotheraphist {
             pstmt.executeUpdate();
             JOptionPane.showMessageDialog(null, "Inserted Successfully");
             con.close();
-                       
-                     
-                        
-            
-            
+ 
         }catch(Exception e){
             System.out.println(e);
         }

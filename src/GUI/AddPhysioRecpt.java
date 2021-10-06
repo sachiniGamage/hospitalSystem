@@ -275,8 +275,6 @@ public class AddPhysioRecpt extends javax.swing.JFrame {
             String ContctNo = txtRContact.getText();
             String Email = txtREmail.getText();
             
-            
-            
             AddcontrollerRcpt R= new AddcontrollerRcpt(name,ContctNo,Email);
             controllerRcpt.PhysRcptC(R);
             
@@ -294,8 +292,6 @@ public class AddPhysioRecpt extends javax.swing.JFrame {
             String name =  txtPName.getText();
             String ContctNo = txtPContact.getText();
             String Email = txtPEmail.getText();
-            
-            
             
             AddphysioRcpt R= new AddphysioRcpt(name,ContctNo,Email);
             controllerphysio.PhysRcptC(R);

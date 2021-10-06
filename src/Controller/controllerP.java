@@ -21,11 +21,6 @@ public class controllerP {
         try{
             
             Connection conn = DBConnection.connect();
-//             Class.forName("com.mysql.cj.jdbc.Driver");
-//            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/phy","root","");      
-//            String insert = "insert into patient values('"+regNo+"'," + name + "',"+age+"', " +addr+"'," +occupation+ "'," +email+"'," +contactNo+")";
-                     
-
             String insert = "insert into patient(Reg_no,Name,Age,Gender,Address,Occupation,Contact_number,email,admit,ward) values(?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement pstmt = conn.prepareStatement(insert);
             
@@ -37,20 +32,11 @@ public class controllerP {
             pstmt.setString(6, p.getOccupation());
             pstmt.setString(7, p.getContactNo());
             pstmt.setString(8, p.getEmail());
-            
             pstmt.setString(9, p.getAdmit());
-            
             pstmt.setString(10, p.getWard());
-            
-//            pstmt.setString(11, p.getDate());
-            
             pstmt.executeUpdate();
             JOptionPane.showMessageDialog(null, "Inserted Successfully");
             conn.close();
-                       
-                     
-                        
-            
             
         }catch(Exception e){
             System.out.println(e);

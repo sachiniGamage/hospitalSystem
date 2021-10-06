@@ -44,8 +44,6 @@ public class EmailUtil {
 
 	      msg.setFrom();
 
-//	      msg.setReplyTo(InternetAddress.parse("no_reply@example.com", false));
-
 	      msg.setSubject(subject, "UTF-8");
 
 	      msg.setText(body, "UTF-8");
@@ -55,7 +53,7 @@ public class EmailUtil {
 	      msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail, false));
 	      System.out.println("Message is ready");
               Transport transport = session.getTransport();
-//                Transport.send(msg);  
+ 
     transport.connect();  
    Transport.send(msg);  
    transport.close();

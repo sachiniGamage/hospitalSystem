@@ -57,9 +57,6 @@ public class EmailMain {
             msg.addHeader("Content-Transfer-Encoding", "8bit");
 
             msg.setFrom();
-
-//            msg.setReplyTo(InternetAddress.parse("viraj.salaka@gmail.com", false));
-
             msg.setSubject(subject, "UTF-8");
 
             msg.setText(body, "UTF-8");

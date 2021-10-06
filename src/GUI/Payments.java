@@ -223,8 +223,6 @@ total=total+Integer.parseInt(txtAmount.getText());
     JOptionPane.showMessageDialog(null, "Payment Sucessfull");
 }
 
-
-
         area.setText("********************************************************\n");
         area.setText(area.getText()+"             Receipt                    \n");
         area.setText(area.getText()+"*****************************************\n");
@@ -238,7 +236,6 @@ total=total+Integer.parseInt(txtAmount.getText());
         area.setText(area.getText()+"Patient ID:"+txtID.getText()+"\n");
         
         area.setText(area.getText()+"Total Amount:"+txtAmount.getText()+"\n");
-        
         
         
     }                                        

@@ -11,15 +11,6 @@ package GUI;
  */
 import java.util.Date;
 import java.util.Properties;
-//import javax.mail.Authenticator;
-//import javax.mail.Message;
-//import javax.mail.Session;
-//import javax.mail.PasswordAuthentication;
-//import javax.mail.internet.InternetAddress;
-//import javax.mail.internet.MimeMessage;
-//import javax.mail.Transport;
-//import javax.swing.JOptionPane;
-//import javax.mail.*;
 import javax.activation.*;
 import physiotherapy.*;
 
@@ -212,45 +203,8 @@ public class Email extends javax.swing.JFrame {
         String subject = txtSubject.getText();
         String body = txtAreaMsg.getText();
         
-            
-            EmailUtil.SendMails();
-        
-//        Properties properties = new Properties();
-//             
-//        properties.put("mail.smtp.starttls.enable", "true");
-//        properties.put("mail.smtp.auth", "true");
-//        properties.put("mail.smtp.host", "smtp.gmail.com");
-//        properties.put("mail.smtp.port", "587");
-//          // SSL Factory 
-//        properties.put("mail.smtp.socketFactory.class", 
-//                "javax.net.ssl.SSLSocketFactory"); 
-//        
-//        Session session = Session.getDefaultInstance(properties,new javax.mail.Authenticator() {
-//            
-//            protected PasswordAuthentication getPasswordAuthentication(){
-//                return new PasswordAuthentication(fromEmail,pswFrom);
-//            }
-//        });
-        
-        
-	
-//            message.setFrom(new InternetAddress(fromEmail));
-//            message.addRecipient(Message.RecipientType.TO, new InternetAddress(toEmail));
-//            message.setSubject(subject);
-//            message.setText(txtAreaMsg.getText()); 
-//            Transport.send(message);
-//            JOptionPane.showMessageDialog(null,"Message Sent!");
-//        }catch(Exception e){
-//            System.out.println(""+e);
-//        }
-
-
-
+        EmailUtil.SendMails();
     
-        
-        
-    
-
                 
     }//GEN-LAST:event_btnSendActionPerformed
 

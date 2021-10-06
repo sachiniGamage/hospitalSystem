@@ -19,7 +19,7 @@ public class view {
         public LinkedList(){
             first = null;
         }
-    public Patient_Reg find(int id){
+        public Patient_Reg find(int id){
             Patient_Reg current = first;
             while(current != null){
                 if(current.reg == id){
@@ -31,7 +31,6 @@ public class view {
             
             return null;
         }
-}
-    
+    }   
     
 }

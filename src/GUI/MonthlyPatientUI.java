@@ -138,89 +138,17 @@ public class MonthlyPatientUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGetDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGetDetailsActionPerformed
-        // TODO add your handling code here:
-        
-        
-        
-        //choose location to save
-        
-//        JFileChooser exelFileChooser = new JFileChooser("D:\\exelFiles");
-//        exelFileChooser.setDialogTitle("Save As");
-//        FileNameExtensionFilter fnef = new FileNameExtensionFilter("EXXCEL FILES", "xls","xlsx","xlsm");
-//        exelFileChooser.setFileFilter(fnef);
-//        int excelCooser = exelFileChooser.showSaveDialog(null);
-//        
-//        if(excelCooser == JFileChooser.APPROVE_OPTION ){
-//        
-//            XSSFWorkbook excelJTableExporter = new XSSFWorkbook();
-//            XSSFSheet excelSheet = excelJTableExporter.createSheet("JTable Sheet");
-//            
-//            for(int i=0;i<11;i++){
-//                XSSFRow excelRow = excelSheet.createRow(i);
-//                for(int j=0;j<10;j++){
-//                    XSSFCell excellCell = excelRow.createCell(j);
-//                }
-//            }
-//        }
-        
-        
-        
-        
-        
-        
-        
-        
+        // TODO add your handling code here:        
         
         try{
-//            Date Fromdate = dateChooserComboFrom.getDateFormat();
-//            Date Todate = dateChooserComboTo.getText();
             String Fromdate = txtFrom.getText();
             String Todate = txtTo.getText();
-//            
-//            SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
-//            SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
-
-//            String Fromdate = dateChooserComboFrom.getText().replaceAll("/", "-");
-//            String Todate = dateChooserComboTo.getText().replaceAll("/", "-");
-//            System.out.println(""+Fromdate);
-     
-
-//            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-////            System.out.println(dateFormat.format(new Date()));
-//                Date date = dateFormat.parse(Fromdate);
-//                System.out.println(""+date);
-//            Date fromDate = dateChooserComboFrom.getDateFormat();
-
-
-//Date d = sdf.parse(dateChooserComboFrom.getText());
-//String d2 = sdf2.format(d);
-//System.out.println(d2);
-        
-
-
-
-
-
-//            System.out.println(""+formattedFromDate);
-            
-            
             //to stop sql injection
                 PreparedStatement pst=null;
                 ResultSet rs = null;
             
-                
-            
             Connection conn = DBConnection.connect();
-            
-//            String sql = "select * from patient where (date between "+ Fromdate+ "And"+Todate )";
-//            int Fdate = Integer.parseInt(Fromdate);
-//            int Tdate = Integer.parseInt(Todate);
             String sql = "SELECT * FROM `patient` WHERE `date` BETWEEN '" +Fromdate+"' AND '"+Todate+"'";
-            
-            
-            
-           
-            
             
                 pst = conn.prepareStatement(sql);               
                 rs = pst.executeQuery();
@@ -250,21 +178,12 @@ public class MonthlyPatientUI extends javax.swing.JFrame {
                     admit = rs.getString("admit");
                     ward = rs.getString("ward");
                     date = rs.getString("date");
-                    
-//                    System.out.println(""+rs.next());
                     String v = name+","+age+","+gender+","+addrss+","+Occu+","+Contct+","+email+","+admit+","+ward+","+date+"\n";
                     completeReport += v;
                 }
              MonthlyPatient.WriteCSV(completeReport);
             
             System.out.println("Finished");
-            
-            
-//            for(int j=0;j<11;j++){
-//                for(int i = Fdate;i<=Tdate;i++){
-//                    
-//                }
-//            }
             
             
         }catch(Exception e){

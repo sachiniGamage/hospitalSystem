@@ -22,9 +22,6 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ViewPatient extends javax.swing.JFrame {
     JFrame f;
-    
-//    Connection con=null;
-//    
 
     /**
      * Creates new form ViewPatient
@@ -54,52 +51,7 @@ public class ViewPatient extends javax.swing.JFrame {
             
         }
     }
-    
-    
-//    public void patient_table(){
-//         PreparedStatement pst=null;
-//             //to store data
-//            ResultSet rs = null;
-//                
-//                Connection conn = DBConnection.connect();
-//                
-//        try {
-//            pst = conn.prepareStatement("select * from patient");
-//            rs = pst.executeQuery();
-//            ResultSetMetaData Rsm = rs.getMetaData();
-//            int c;
-//            c = Rsm.getColumnCount();
-//            DefaultTableModel df = (DefaultTableModel)jTable1.getModel();
-//            df.setRowCount(0);
-//            
-//            while(rs.next()){
-//                
-//                Vector v2 = new Vector();
-//                
-//                for(int i=1;i<c;i++){
-//                v2.add(rs.getString("Reg_no"));
-//                v2.add(rs.getString("Name"));
-//                v2.add(rs.getString("Age"));
-//                v2.add(rs.getString("Gender"));
-//                v2.add(rs.getString("Address"));
-//                v2.add(rs.getString("Occupation"));
-//                v2.add(rs.getString("Contact_number"));
-//                v2.add(rs.getString("email"));
-//                v2.add(rs.getString("admit"));
-//                v2.add(rs.getString("ward"));
-//                v2.add(rs.getString("date"));
-//                }
-//                df.addRow(v2);
-//            }
-//        } catch (SQLException ex) {
-//            Logger.getLogger(ViewMails.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//    }
-    
-   
-    
-
-    
+      
     public int binarySearch(String name){
         
          int bottom = 0;
@@ -333,12 +285,6 @@ public class ViewPatient extends javax.swing.JFrame {
     }//GEN-LAST:event_btnADDNewPatientActionPerformed
 
     private void btnDeletePatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletePatientActionPerformed
-        // TODO add your handling code here:
-        
-//        boolean y = true;
-//        JOptionPane.showInputDialog(f, "Enter password");
-        
-        //if(physiotherapist's password is true;
         
         int x = JOptionPane.showConfirmDialog(null,"Do you want to delete ?");
         
@@ -373,9 +319,6 @@ public class ViewPatient extends javax.swing.JFrame {
             Connection conn = DBConnection.connect();
             String sql = "select * from patient where Reg_no like " + s ;
             pID = s;
-            
-//            patient_table();
-            
 
             try {
                 pst = conn.prepareStatement(sql);               
